@@ -1,0 +1,20 @@
+
+{% extends 'school/base.html'%}
+{% load crispy_forms_tags %}
+ {% load static %}
+ {% block content%}
+<div class="animated slideInDown slow-4s card container mt-5 p-4" style="width: 45rem;">
+	<div class="text-center"><h5>New curriculum support system</h5></div>
+<form method="POST">
+{% csrf_token %}
+  <div class="text-center alert alert-warning">Admin login panel</div>
+  {{ form|crispy }}
+  <div class="d-flex justify-content-between">
+      <button type="submit" name="signup_submit" class="animated bounceIn delay-1s btn btn-success"><i class="fa fa-users"></i> Login</button>
+      <h6><a href="{% url 'password-reset' %}" class="nav-link animated bounceIn delay-1s"><span class='text-info'> forgot password?</span></a></h6>
+  </div>
+
+</form>
+</div>
+{% endblock content%}
+

@@ -1,0 +1,26 @@
+
+{% extends 'school/base.html'%}
+{% load crispy_forms_tags %}
+ {% load static %}
+ {% block content%}
+<div class="animated slideInDown slow-4s card container mt-5 p-4" style="width: 45rem;">
+{% if object %}
+  <div class="text-center"><h5 class="p-2"><strong>Update the existing student details "{{ object.student_name }}"</strong></h5></div>
+{% else %}
+ <div class="text-center"><h5>Register new students!!</h5></div>
+ <div class="text-center alert alert-danger">Please fields marked with <span class="text-danger">*</span> are all required </div>
+{% endif %}
+	
+<form method="POST">
+{% csrf_token %}
+  {{ form|crispy }}
+{% if object %}
+ <button type="submit" name="signup_submit" class="btn btn-success"><i class="fas fa-edit"></i> Update student details</button>
+{% else %}
+
+ <button type="submit" name="signup_submit" class="btn btn-success"><i class="fas fa-plus"></i> Save details</button>
+{% endif %}
+</form>
+</div>
+{% endblock content%}
+

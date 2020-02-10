@@ -1,0 +1,26 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-body">
+		<h5 class="text-center p-3 text-warning">Delete Student</h5>
+	    <form method="POST">
+        {% csrf_token %}
+		<div class="p-3">
+        <p>Are you shure to delete the student "{{ object.student_name}}?"</p>
+        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Yes, delete</button>
+		<a href="{% url 'lower-primary-student-details' object.id %}" class="card-link btn btn-secondary"> Cancel</a>
+		</div>
+        </form>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+	</div>
+</div>
+{% endblock content%}
+
+
+
+

@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <link rel="icon" type="image/png" href="{% static 'images/new_logo.png'%}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    teacher-dashboard
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link rel="stylesheet"  href="{% static 'css/material-dashboard.min.css' %}">
+
+</head>
+
+<body class="dark-edition">
+
+  <div class="wrapper ">
+    <div class="sidebar" data-color="azure" data-background-color="black" data-image="{% static 'images/sidebar-2.jpg' %}">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo"><a href="{% url 'home' %}" class="simple-text logo-normal"><i class="material-icons">art_track</i>
+          Home
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="dashboard.php">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="fees_status.php">
+              <i class="material-icons">monetization_on</i>
+              <p>Fees status</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'profile' %}">
+              <i class="material-icons">edit</i>
+              <p>Edit profile</p>
+            </a>
+          </li>
+<!--          <li class="nav-item ">-->
+<!--            <a class="nav-link" href="{% url 'change-password' %}">-->
+<!--              <i class="material-icons">brush</i>-->
+<!--              <p>Change password</p>-->
+<!--            </a>-->
+<!--          </li>-->
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'register' %}">
+              <i class="material-icons">add</i>
+              <p>Register Teacher</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <form method="POST">
+              <a class="nav-link" href="{% url 'logout' %}">
+              <i class="material-icons">exit_to_app</i>
+              <p>Logout</p>
+            </a>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top bg-success" id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:void(0)">Teachers dashboard</a>
+          </div>
+
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+
+                  <img class='rounded-circle' src='{{ user.profile.image.url }}' style='width: 40px; height: 40px;'>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              {% if messages %}
+			{% for message in messages %}
+			<div class='text-center alert alert-{{message.tags}}'>
+			{{ message }}
+			</div>
+			{% endfor %}
+			{% endif %}
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Teacher dashboard profile information</h4>
+                  <p class="card-category">New education curriculum support system for tracking students progress</p>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-hover">
+                    <thead class="text-warning">
+                      <th class="text-primary"><strong>Teacher information</strong></th>
+                      <th></th>
+
+                    </thead>
+                    <tbody>
+                            <tr>
+                            <td><a class="text-secondary" href=""><i class="material-icons">person</i>Teacher username</a></td>
+                            <td>{{ user.username }}</td>
+                            </tr>
+                            <tr>
+                            <td><a class="text-secondary" href=""><i class="material-icons"><strong>mail</strong></i>email address</a></td>
+                            <td>{{ user.email }}</td>
+                            </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a href="{% url 'send-message' %}"><i class="material-icons right">email</i>
+                  Text messages
+                </a>
+              </li>
+              <li>
+                <a href="track_progress.php"><i class="material-icons right">directions_bike</i>
+                  student progress
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-right" id="date">
+            ; All rights observed!<i class="material-icons">favorite</i>
+
+          </div>
+        </div>
+      </footer>
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById('date');
+        date.innerHTML = '&copy;Copyright new education support system 2018-' + x + date.innerHTML;
+      </script>
+    </div>
+  </div>
+
+  <!--   Core JS Files   -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-material-design.min.js' %}"></script>
+  <script src="https://unpkg.com/default-passive-events"></script>
+  <script src="{% static 'js/perfect-scrollbar.jquery.min.js' %}"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="{% static 'js/chartist.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-notify.js' %}"></script>
+  <script src="{% static 'js/material-dashboard.min.js' %}"></script>
+
+</body>
+</html>

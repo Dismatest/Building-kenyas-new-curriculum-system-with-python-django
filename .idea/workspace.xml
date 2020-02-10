@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37abf70d-303f-4521-a5de-43ef131b883e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/jobs/jobs/settings/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/jobs/settings/local.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/jobs/settings/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/jobs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/jobs/settings/production.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/jobs" />
+  </component>
+  <component name="ProjectId" id="1Vtil7CjvY1e2yKbIZuplyOmsp1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jobs/jobs/settings" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jobs/jobs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="jobsproject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/tkinter" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/tkinter/example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.example" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="450" y="216" width="525" height="365" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580202157622">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state x="450" y="216" width="525" height="365" key="#com.intellij.fileTypes.FileTypeChooser/70.23.1296.745@70.23.1296.745" timestamp="1580202157622" />
+    <state x="404" y="135" width="618" height="528" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579621219385">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state x="404" y="135" width="618" height="528" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.23.1296.745@70.23.1296.745" timestamp="1579621219385" />
+    <state x="554" y="210" width="318" height="377" key="FileChooserDialogImpl" timestamp="1581338328657">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state x="554" y="210" width="318" height="377" key="FileChooserDialogImpl/70.23.1296.745@70.23.1296.745" timestamp="1581338328657" />
+    <state width="638" height="55" key="GridCell.Tab.0.bottom" timestamp="1579899055710">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state width="638" height="55" key="GridCell.Tab.0.bottom/70.23.1296.745@70.23.1296.745" timestamp="1579899055710" />
+    <state width="638" height="55" key="GridCell.Tab.0.center" timestamp="1579899055708">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state width="638" height="55" key="GridCell.Tab.0.center/70.23.1296.745@70.23.1296.745" timestamp="1579899055708" />
+    <state width="638" height="55" key="GridCell.Tab.0.left" timestamp="1579899055707">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state width="638" height="55" key="GridCell.Tab.0.left/70.23.1296.745@70.23.1296.745" timestamp="1579899055707" />
+    <state width="638" height="55" key="GridCell.Tab.0.right" timestamp="1579899055709">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state width="638" height="55" key="GridCell.Tab.0.right/70.23.1296.745@70.23.1296.745" timestamp="1579899055709" />
+    <state x="70" y="206" width="775" height="562" key="SettingsEditor" timestamp="1579702219956">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state x="70" y="206" width="775" height="562" key="SettingsEditor/70.23.1296.745@70.23.1296.745" timestamp="1579702219956" />
+    <state x="492" y="265" width="505" height="399" key="search.everywhere.popup" timestamp="1578082178865">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state x="492" y="265" width="505" height="399" key="search.everywhere.popup/70.23.1296.745@70.23.1296.745" timestamp="1578082178865" />
+    <state x="447" y="321" width="531" height="156" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1581320658507">
+      <screen x="70" y="23" width="1296" height="745" />
+    </state>
+    <state x="447" y="321" width="531" height="156" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/70.23.1296.745@70.23.1296.745" timestamp="1581320658507" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jobs/school/views.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

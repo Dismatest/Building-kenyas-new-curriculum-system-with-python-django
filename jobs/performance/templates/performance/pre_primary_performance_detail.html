@@ -1,0 +1,71 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+            <div><a href="{% url 'home' %}" data-toggle="tooltip" title="home menu" class="card-link"><i class="fas fa-home"></i> Home</a></div>
+			<div><a href="#" data-toggle="tooltip" title="track student performance" class="card-link"><i class="far fa-circle"></i> Students performance</a></div>
+			<div><a href="#" data-toggle="tooltip" title="send text message to parent" class="card-link"><i class="fas fa-envelope-open-text"></i>  Text messages</a></div>
+		    <div><a href="{% url 'dashboard' %}" data-toggle="tooltip" title="teachers dashboard" class="card-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></div>
+
+		</div>
+		</div>
+		<div class="card-body">
+			<table class="card-body">
+		<h5 class="text-center p-3 text-secondary">{{ object.Student_name }}, performance</h5>
+
+        <table class="table text-center">
+			<thead class="thead-dark">
+			<tr>
+				<th>subjects</th>
+			    <th>scores per activity</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><span>Student Name</span></td>
+				<td>{{ object.Student_name }}</td>
+			</tr>
+			<tr>
+				<td><span>Language Activities</span></td>
+				<td>{{ object.Language_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Mathematical Activities</span></td>
+				<td>{{object.Mathematical_activities}}</td>
+			</tr>
+			<tr>
+				<td><span>Religious Education Activities</span></td>
+				<td>{{ object.Religious_education_activities  }}</td>
+			</tr>
+			<tr>
+				<td><span> Environmental activities</span></td>
+				<td>{{ object.Environmental_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Psychomotor and creative activities  </span></td>
+				<td>{{ object.Psychomotor_and_creative_activities  }}</td>
+			</tr>
+			<tr>
+				<td><span>Teachers comment</span></td>
+				<td>{{ object.Teachers_comment }}</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="d-flex justify-content-between">
+		<a href="{% url 'pre-primary-performance' %}" class="pl-2" data-toggle="tooltip" title="navigate backwards"><i class="fas fa-backward"></i> Back</a>
+	    <a href="" data-toggle="tooltip" class="pr-2" title="print the document">Print <i class="fas fa-print"></i></a>
+		</div>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+{% endblock content%}
+
+
+
+

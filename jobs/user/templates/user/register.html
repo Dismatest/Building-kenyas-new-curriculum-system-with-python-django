@@ -1,0 +1,17 @@
+
+{% extends 'school/base.html'%}
+{% load crispy_forms_tags %}
+ {% load static %}
+ {% block content%}
+<div class="animated slideInDown slow-4s card container mt-5 p-4" style="width: 45rem;">
+	<div class="text-center"><h5>Register as admin!!</h5></div>
+<form method="POST">
+{% csrf_token %}
+  <div class="text-center alert alert-danger">Please fields marked with <span class="text-danger">*</span> are all required </div>
+  {{ form|crispy }}
+  
+  <button type="submit" name="signup_submit" class="animated bounceInUp delay-1s btn btn-success"><i class="fa fa-users"></i> Register</button>
+</form>
+</div>
+{% endblock content%}
+

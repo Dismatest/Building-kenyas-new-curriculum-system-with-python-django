@@ -1,0 +1,68 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+            <div><a href="{% url 'home' %}" data-toggle="tooltip" title="home menu" class="card-link"><i class="fas fa-bars"></i> Menu</a></div>
+			<div><a href="#" data-toggle="tooltip" title="track student performance" class="card-link"><i class="far fa-circle"></i> Track progress</a></div>
+			<div><a href="{% url 'lower-primary-student-create' %}" data-toggle="tooltip" title="lists of registared student" class="card-link"><i class="far fa-circle"></i> addstudent</a></div>
+			<div><a href="#" data-toggle="tooltip" title="fees status" class="card-link"><i class="fas fa-coins"></i> Fee status</a></div>
+
+		</div>
+		</div>
+		<div class="card-body">
+
+			<table class="table pt-2">
+				<thead class="thead-dark">
+				<tr>
+					<td>{{ object.student_name }}</td>
+					<td>Details</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>Student name</td>
+					<td>{{ object.student_name }}</td>
+				</tr>
+				<tr>
+					<td>Student registration number</td>
+					<td>{{ object.registration_number }}</td>
+				</tr>
+				<tr>
+					<td>Student class</td>
+					<td>{{ object.student_class }}</td>
+				</tr>
+				<tr>
+					<td>Student gender</td>
+					<td>{{ object.student_gender }}</td>
+				</tr>
+				<tr>
+					<td>Student parent name</td>
+					<td>{{ object.parent_name }}</td>
+				</tr>
+				<tr>
+					<td>Student parent phone number</td>
+					<td>{{ object.phone_number }}</td>
+				</tr>
+				</tbody>
+
+			</table>
+	<div class="d-flex justify-content-between">
+        <a href="{% url 'student-update' object.id %}" data-toggle="tooltip" title="update student" class="card-link btn btn-warning"><i class="fas fa-edit"></i> Update stuent details</a>
+		<a href="{% url 'student-delete' object.id %}" data-toggle="tooltip" title="delete student from the registration list" class="card-link btn btn-danger"><i class="fas fa-trash-alt"></i> Delete student</a>
+	</div>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+	</div>
+</div>
+{% endblock content%}
+
+
+
+

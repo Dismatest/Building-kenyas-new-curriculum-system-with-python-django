@@ -1,0 +1,57 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+            <div><a href="{% url 'home' %}" data-toggle="tooltip" title="home menu" class="card-link"><i class="fas fa-bars"></i> Home</a></div>
+			<div><a href="{% url 'track-progress' %}" data-toggle="tooltip" title="track student performance" class="card-link"><i class="far fa-circle"></i> Track progress</a></div>
+			<div><a href="{% url 'fees-status' %}" data-toggle="tooltip" title="fees status" class="card-link"><i class="fas fa-coins"></i> Fee status</a></div>
+			<div><a href="{% url 'lower-primary-student-create' %}" data-toggle="tooltip" title="register new student" class="card-link"><i class="fas fa-plus"></i> New student</a></div>
+		</div>
+		</div>
+		<div class="card-body">
+		<div class="d-flex justify-content-between">
+	    <a href="{% url 'lower-primary-export-excel' %}" class="card-link"><i class="fas fa-download"></i></i> export to excel</a>
+		<p>Number of students <span class="badge badge-secondary">{{ students.count }}</span></p>
+		</div>
+		<h5 class="text-center">Lists of all lower primary registered students and their details</h5>
+		<table class="table" id="myTable">
+		<thead class="thead-light">
+		<tr>
+		<th>Id</th>
+		<th>Student Name</th>
+		<th>Reg Number</th>
+		<th>Gender</th>
+		<th>View Details</th>
+		<th>Update/Edit</th>
+		</tr>
+		</thead>
+		<tbody class="animated slideInDown slow-4s">
+		{% for student in students %}
+		<tr>
+		<td>{{ student.id }}</td>
+		<td>{{ student.student_name }}</td>
+		<td> {{ student.registration_number }}</td>
+		<td> {{ student.student_gender }}</td>
+		<td><a href="{% url 'lower-primary-student-details' student.id %}" data-toggle="tooltip" title="view student details" class="card-link btn btn-success"><i class="fas fa-calendar-day"></i> Details</a></td>
+		<td><a href="{% url 'lower-primary-student-update' student.id %}" data-toggle="tooltip" title="update student" class="card-link btn btn-warning"><i class="fas fa-edit"></i> Update</a></td>
+		</tr>
+		{% endfor %}
+		</tbody>
+        </table>
+		</div>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+	</div>
+</div>
+{% endblock content%}
+
+
+
+

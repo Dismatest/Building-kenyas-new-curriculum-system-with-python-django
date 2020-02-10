@@ -1,0 +1,27 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+            <div><a href="{% url 'home' %}" data-toggle="tooltip" title="home menu" class="card-link"><i class="fas fa-bars"></i> Menu</a></div>
+			<div><a href="{% url 'students' %}" data-toggle="tooltip" title="track student performance" class="card-link"><i class="far fa-circle"></i> addstudents</a></div>
+			<div><a href="{% url 'fees-status' %}" data-toggle="tooltip" title="fees status" class="card-link"><i class="fas fa-coins"></i> Fee status</a></div>
+			<div><a href="{% url 'student-create' %}" data-toggle="tooltip" title="register new student" class="card-link"><i class="fas fa-plus"></i> New student</a></div>
+		</div>
+		</div>
+
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+	</div>
+</div>
+{% endblock content%}
+
+
+
+

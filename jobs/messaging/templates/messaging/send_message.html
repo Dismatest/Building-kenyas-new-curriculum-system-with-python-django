@@ -1,0 +1,91 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+            <div><a href="{% url 'home' %}" data-toggle="tooltip" title="home menu" class="card-link"><i class="fas fa-home"></i> Home</a></div>
+			<div><a href="#" data-toggle="tooltip" title="view performance" class="card-link"><i class="far fa-circle"></i> Students Performance</a></div>
+			<div><a href="{% url 'send-message' %}" data-toggle="tooltip" title="send messages to the parent" class="card-link"><i class="fas fa-envelope-open-text"></i>  Text Messages</a></div>
+			<div><a href="{% url 'dashboard' %}" data-toggle="tooltip" title="teachers dashboard" class="card-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></div>
+		</div>
+		</div>
+		<div class="container">
+        <form class="m-3">
+        <div class="form-group">
+        <label for="exampleFormControlInput1">Parent Phone number</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+254 27750213">
+        </div>
+        <div class="form-group">
+			<label for="exampleFormControlTextarea1">Type the message here</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        </form>
+			<div class="text-center">
+				<button type="submit" class="btn btn-secondary my-3 text-center">Send message</button>
+			</div>
+		</div>
+		<div class="container">
+			<table class="table">
+				<thead>
+					<tr>
+						<th class="text-secondary">Student Name</th>
+						<th class="text-secondary">Parent Name</th>
+						<th class="text-secondary">Student Class</th>
+						<th class="text-secondary">Parent Phone Number</th>
+						<th class="text-secondary">Student Performance</th>
+   					 </tr>
+ 				 </thead>
+				<tbody>
+				{% for messages in message %}
+				<tr>
+
+					<td><p class="text-secondary">{{ messages.student_name }}</p></td>
+					<td><p class="text-secondary">{{ messages.parent_name }}</p></td>
+					<td><p class="text-secondary">{{ messages.student_class }}</p></td>
+					<td><p class="text-secondary">{{ messages.phone_number }}</p></td>
+					<td><a href="{% url 'pre-primary-performance-details' messages.id %}" data-toggle="tooltip" title="view student performance" class="card-link btn btn-success"><i class="fas fa-calendar-day"></i> View performance</a></td>
+
+				</tr>
+				{% endfor %}
+					{% for messag in message_one %}
+				<tr>
+
+					<td><p class="text-secondary">{{ messag.student_name }}</p></td>
+					<td><p class="text-secondary">{{ messag.parent_name }}</p></td>
+					<td><p class="text-secondary">{{ messag.student_class }}</p></td>
+					<td><p class="text-secondary">{{ messag.phone_number }}</p></td>
+					<td><a href="{% url 'lower-primary-performance-details' messag.id %}" data-toggle="tooltip" title="view student performance" class="card-link btn btn-success"><i class="fas fa-calendar-day"></i> View performance</a></td>
+
+				</tr>
+					{% endfor %}
+				{% for m in message_two %}
+				<tr>
+
+					<td><p class="text-secondary">{{ m.student_name }}</p></td>
+					<td><p class="text-secondary">{{ m.parent_name }}</p></td>
+					<td><p class="text-secondary">{{ m.student_class }}</p></td>
+					<td><p class="text-secondary">{{ m.phone_number }}</p></td>
+					<td><a href="{% url 'upper-primary-performance-details' m.id %}" data-toggle="tooltip" title="view student performance" class="card-link btn btn-success"><i class="fas fa-calendar-day"></i> View performance</a></td>
+
+				</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<br>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+	</div>
+</div>
+{% endblock content%}
+
+
+
+
+

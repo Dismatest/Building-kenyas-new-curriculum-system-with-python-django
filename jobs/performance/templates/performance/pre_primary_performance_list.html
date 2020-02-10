@@ -1,0 +1,50 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+            <div><a href="{% url 'home' %}" data-toggle="tooltip" title="home menu" class="card-link"><i class="fas fa-bars"></i> Home</a></div>
+			<div><a href="{% url 'students' %}" data-toggle="tooltip" title="track student performance" class="card-link"><i class="far fa-circle"></i> Registration</a></div>
+			<div><a href="{% url 'fees-status' %}" data-toggle="tooltip" title="fees status" class="card-link"><i class="fas fa-coins"></i> Fee status</a></div>
+			<div><a href="{% url 'pre-primary-performance-create' %}" data-toggle="tooltip" title="register new student" class="card-link"><i class="fas fa-plus"></i> Add results</a></div>
+		</div>
+		</div>
+		<div class="card-body">
+		<h5 class="text-center p-3">Select student and edit performance</h5>
+		<table class="table" id="myTable">
+		<thead class="thead-light">
+		<tr>
+		<th>Id</th>
+		<th>Student Name</th>
+		<th>View performance</th>
+        <th>Edit/Update</th>
+		</tr>
+		</thead>
+		<tbody class="animated slideInDown slow-4s">
+		{% for student in students %}
+		<tr>
+		<td>{{ student.id }}</td>
+		<td>{{ student.Student_name }}</td>
+		<td><a href="{% url 'pre-primary-performance-details' student.id %}" data-toggle="tooltip" title="view student details" class="card-link btn btn-success"><i class="fas fa-calendar-day"></i> View performance</a></td>
+		<td><a href="{% url 'pre-primary-performance-update' student.id %}" data-toggle="tooltip" title="update performance" class="card-link btn btn-warning"><i class="fas fa-edit"></i> Update performance</a></td>
+		</tr>
+		{% endfor %}
+		</tbody>
+        </table>
+		</div>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+	</div>
+</div>
+{% endblock content%}
+
+
+
+
+

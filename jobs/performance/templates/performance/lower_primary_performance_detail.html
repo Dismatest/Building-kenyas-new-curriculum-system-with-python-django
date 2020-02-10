@@ -1,0 +1,87 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+<div class="container pt-4">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+            <div><a href="{% url 'home' %}" data-toggle="tooltip" title="home menu" class="card-link"><i class="fas fa-bars"></i> Home</a></div>
+			<div><a href="#" data-toggle="tooltip" title="track student performance" class="card-link"><i class="far fa-circle"></i> Track progress</a></div>
+			<div><a href="{% url 'lower-primary-student-create' %}" data-toggle="tooltip" title="lists of registared student" class="card-link"><i class="far fa-circle"></i> addstudent</a></div>
+			<div><a href="#" data-toggle="tooltip" title="fees status" class="card-link"><i class="fas fa-coins"></i> Fee status</a></div>
+
+		</div>
+		</div>
+		<table class="card-body">
+		<h5 class="text-center p-3">{{ object.Student_name }}, performance</h5>
+
+        <table class="table text-center">
+			<thead class="thead-dark">
+			<tr>
+				<th>subjects</th>
+			    <th>scores per activity</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><span>Student Name</span></td>
+				<td>{{ object.Student_name }}</td>
+			</tr>
+			<tr>
+				<td><span>English language activities</span></td>
+				<td>{{ object.English_language_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Kiswahili language activities</span></td>
+				<td>{{ object.Kiswahili_language_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Mathematical Activities</span></td>
+				<td>{{ object.Mathematical_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Environmental Activities</span></td>
+				<td>{{ object.Environmental_activities }}</td>
+			</tr>
+			<tr>
+				<td><span> Literacy Activities</span></td>
+				<td>{{ object.Literacy_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Indigenous language activities</span></td>
+				<td>{{ object.Indigenous_language_activities  }}</td>
+			</tr>
+			<tr>
+				<td><span>Hygiene and nutrition activities</span></td>
+				<td>{{ object.Hygiene_and_nutrition_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Religious education activities </span></td>
+				<td>{{ object.Religious_education_activities }}</td>
+			</tr>
+			<tr>
+				<td><span>Movement and creative activities</span></td>
+				<td>{{ object.Movement_and_creative_activities }}</td>
+
+			</tr>
+			<tr>
+				<td><span>Teachers comment</span></td>
+				<td>{{ object.Teachers_comment }}</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="d-flex justify-content-between">
+		<a href="{% url 'lower-primary-performance' %}" class="pl-2" data-toggle="tooltip" title="navigate backwards"><i class="fas fa-backward"></i> Back</a>
+	    <a href="" data-toggle="tooltip" class="pr-2" title="print the document">Print <i class="fas fa-print"></i></a>
+		</div>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+{% endblock content%}
+
+
+
+

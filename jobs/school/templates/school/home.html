@@ -1,0 +1,177 @@
+
+ {% extends 'school/base.html'%}
+ {% load static %}
+ {% block content %}
+
+
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h5 class="modal-title" id="myModalLabel">Student Lavel</h5>
+      </div>
+
+      <div class="modal-body">
+      <div class="accordian">
+      <ul class="list-unstyled">
+      <li class="open">
+      <div class="question">
+       <a href="{% url 'students' %}" >Pre primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      <div class="answer">
+       <p>Pre primary is the nursery school class 1-3</p>
+      </div>
+      </li>
+      <li>
+      <div class="question">
+        <a href="{% url 'lower-primary-students' %}" >Lower primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      <div class="answer">
+       <p>Lower primary runs for three years 4-6</p>
+      </div>
+      </li>
+      <li>
+      <div class="question">
+        <a href="{% url 'upper-primary-students' %}">Upper primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      <div class="answer">
+       <p>Upper primary runs for two years 6-8</p>
+      </div>
+      </li>
+      </ul>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="far fa-times-circle"></i></button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h5 class="modal-title" id="myModalLabel">Choose lavel of student you wish to track progress</h5>
+      </div>
+
+      <div class="modal-body">
+        <div class="accordian">
+      <ul class="list-unstyled">
+      <li class="open">
+      <div class="question">
+       <a href="{% url 'pre-primary-performance' %}" >Pre primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      </li>
+      <li>
+      <div class="question">
+        <a href="{% url 'lower-primary-performance' %}" >Lower primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      </li>
+      <li>
+      <div class="question">
+        <a href="{% url 'upper-primary-performance' %}">Upper primary</a>
+        <span><i class='icon fas fa-angle-down'></i></span>
+      </div>
+      </li>
+	   </ul>
+	  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="far fa-times-circle"></i></button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<!---end of modal--->
+
+
+<div class="animated slideInDown slow-4s container pt-5">
+<div class="card">
+  <nav class="navbar navbar-dark bg-dark">
+    <a href="{% url 'change-password' %}"><button class="navbar-toggler" type="button" data-toggle="tooltip" title="change password form" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span><i class="fas fa-cog"></i></span>
+    </button>
+    </a>
+	<div class="d-flex align-items-baseline">
+		<h6><a href="{% url 'dashboard' %}" class="nav-link"><i class="fas fa-tachometer-alt"></i><span class='text-info'> dashboard</span></a></h6>
+
+	</div>
+  </nav>
+</div>
+</div>	
+<div class="container">
+	<div class="card">
+		<div class="card-header">
+		<div class="navbar">
+			<div class="tooltip bs-tooltip-top" role="tooltip">
+			</div>
+
+			<div>
+				<a href="#" data-toggle="tooltip" title="main menu" class="card-link"><i class="fas fa-home"></i> Home</a>
+			</div>
+			<div><a href="{% url 'register' %}" data-toggle="tooltip" title="admin registration" class="card-link"><i class="fas fa-user-plus"></i> Register Admin</a></div>
+			<div><a href="{% url 'track-progress' %}" data-toggle="tooltip" title="view performance" class="card-link"><i class="far fa-circle"></i> Students performance</a></div>
+			<div><a href="{% url 'send-message' %}" data-toggle="tooltip" title="send text messages to parent" class="card-link"><i class="fas fa-envelope-open-text"></i> Text messages</a></div>
+			<div class="dropdown">
+
+				<a class="card-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-unlock-alt"></i> {{ user.username }}
+			    </a>
+			    <div class="animated slideInDown slow-4s dropdown-menu" aria-labelledby="navbarDropdown">
+                       <form method="POST">
+				        <a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </form>
+				    	</form>
+
+				</div>
+
+			</div>
+		</div>
+		</div>
+		<div class="card-body">
+			<div class="row p-1">
+				<div class="col-md-4">
+				<img src="{% static 'images/users.png' %}" class="rounded" style="width: 300px; height: 200px;">
+				<div class="text-center">
+
+					<button class="btn btn-secondary btn-sm p-2 mt-3 "type="button" data-toggle="modal" data-target="#myModal1"><i class="fas fa-users"></i>Registared students</button>
+				</div>
+				</div>
+				<div class="col-md-4">	
+				<img src="{% static 'images/progressbar.jpg' %}" class="rounded" style="width: 300px; height: 200px;">
+				<div class="text-center">
+					 <button type="button" class="btn btn-secondary btn-sm p-2 mt-3" id="signin"><i class="fas fa-tasks"></i>Trackprogress</button>
+				</div>
+				</div>
+				<div class="col-md-4">
+				<img src="{% static 'images/messages.jpg' %}" class="rounded" style="width: 300px; height: 200px;">
+				<div class="text-center">
+
+					<a href="{% url 'send-message' %}" class="btn btn-secondary p-2 mt-3" role="button" aria-pressed="true" data-toggle="tooltip" title="text messages"><i class="fas fa-money-check-alt"></i> Text messages</a>
+			    </div>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer">
+			<p class="text-center text-muted">&copy;Copyright new education support system 2019-2020. All Rights observed!</p>
+		</div>
+	</div>
+</div>
+</div>
+{% endblock content%}
+

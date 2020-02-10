@@ -1,0 +1,30 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/bugatti.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 180px;
+}
+.box {
+  width: 650px;
+  height: 250px;
+  background-color: rgb(0, 0, 0, 0.8);
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  justify-content: center;
+}
+.box button {
+  width: 100px;
+  margin: 15px;
+  border: none;
+}
+.box a {
+  font-size: 30px;
+}
+.hed {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(240, 255, 240, 0.5);
+}
